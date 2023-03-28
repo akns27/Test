@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    
+    printf("%s", (a >= 50 && a <= 70)? "win" : (a%6 == 0) ? "win" : "lose");
+
+    return 0;
+}
