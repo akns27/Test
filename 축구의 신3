@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    int a ,b;//a는 현재시간 b는 점수
+    scanf("%d %d", &a, &b);
+    printf("%d", (89-a)/5+b+1);//전체시간-현재시간/5+점수+(80분에 들어오자마자 얻는 점수)
+    return 0;
+    
+}
