@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+
+
+{
+    char a;
+    int year, month, day, gender, num;
+    scanf("%2d%2d%2d-%1d%d", &year, &month, &day, &gender, &num);
+    if(gender <= 2)
+        year+=1900;
+    else
+        year+=2000;
+    if(gender%2 ==1)
+        a ='M';
+    else 
+        a = 'F';
+    
+    printf("%4d/%02d/%02d %c", year, month, day, a);
+}
