@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void check_luck(int year, int month, int day) {
+    int num_sum = year + month + day;
+    int hundredth_digit = (num_sum / 100) % 10;
+    if (hundredth_digit % 2 == 0) {
+        printf("대박\n");
+    }
+    else {
+        printf("그럭저럭\n");
+    }
+}
+
+int main() {
+    int year, month, day;
+    scanf("%d %d %d", &year, &month, &day);
+    check_luck(year, month, day);
+    return 0;
+}
