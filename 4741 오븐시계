@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    int A, B, C, total_minutes;
+    scanf("%d %d %d", &A, &B, &C);
+    total_minutes = A * 60 + B + C;
+    total_minutes %= 1440;  // 24시간이 넘어가는 경우를 대비해 1440(24*60)으로 나누어줌
+    printf("%d %d", total_minutes / 60, total_minutes % 60);
+    return 0;
+}
