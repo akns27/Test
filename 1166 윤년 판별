@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    unsigned int year;
+    scanf("%u", &year);
+
+    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+        printf("Leap\n");
+    }
+    else {
+        printf("Normal\n");
+    }
+
+    return 0;
+}
