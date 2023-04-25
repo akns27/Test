@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+
+{
+  int n=3, m;
+  while(n--)//3번 출력
+    m=6;
+    while(m--){//6번 출력
+      printf("아양~~")//3번X6번 출력 = 총 18번 출력
+        }
+        pritnf("\n")
+    }
+    printf("%d %d", n, m);
+    return 0;
+}
