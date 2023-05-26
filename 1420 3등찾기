@@ -1,0 +1,27 @@
+#include <stdio.h>
+  
+int main() 
+{
+    int n, i, j;//n, i, j를 받아줌
+    char name[55][22];//2차원 배열을 사용해서 name이라는 변수[행][열]로 받아줌
+    int score[55], rank[55];//점수와 등수는 따로 배열
+  
+    scanf("%d", &n);//scanf로 인식
+    for(i=1; i<=n; i++) //n번 만큼 반복하고 1씩 더해줌
+    {
+        scanf("%s", name[i]); //name 인식 이차원=&없음
+        scanf("%d", &score[i]); //score인식
+        rank[i]=1;//rank가 1
+    }
+  
+    for(i=1; i<=n; i++)//n번 만큼 반복
+        for(j=1; j<=n; j++)//n번만큼 반복하고
+            if(score[i] < score[j])//만약 score[i]가 [j]보다 작다면 
+                rank[i]++; //rank에 1 더하기, score가 작다면(ex.2등이 1등보다 점수가 낮음) 3등이 될때 까지 반복하라는 뜻
+              
+    for(i=1; i<=n; i++)//n번만큼 반복
+        if(rank[i]==3)//rank가 3이라면 
+            printf("%s", name[i]);//printf("3등 이름")
+      
+    return 0; 
+}
