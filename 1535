@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int n, d[110];
+
+
+int f() {
+    int i = 0;
+    int max = 0;
+
+    while (i < n) {
+        if (d[i] > d[max]) {
+            max = i;
+        }
+        i++;//--로 시작하니 i++을 해줘야 0을 입력받았을 때 최소 한번의 입력을 보장해줌
+    }
+
+    return max + 1;//0부터 인덱스가 시작하므로 +1을 해서 만약 5을 입력받았다면 5번째 배열을 찾는다.
+}
+
+int main()
+{
+  scanf("%d", &n);
+
+  for(int i=0; i<n; i++)
+    scanf("%d", &d[i]);
+
+  printf("%d", f());
+  return 0;
+}
