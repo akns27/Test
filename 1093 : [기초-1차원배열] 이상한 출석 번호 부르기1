@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main()
+{
+    int n, i, t, a[24] = {0};
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &t);
+        a[t] = a[t] + 1;
+    }
+
+    for (i = 1; i <= 23; i++) {
+        printf("%d ", a[i]);  // 숫자 출력 이후에 공백 추가
+    }
+
+    return 0;
+}
