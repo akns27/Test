@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int h1, h2, h3;
+    scanf("%d %d %d", &h1, &h2, &h3);
+
+    if (h1 > 170 && h2 > 170 && h3 > 170)
+    {
+        printf("PASS");
+    }
+    else
+    {
+        printf("CRASH");
+    }
+
+    return 0;
+}
