@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+
+  int i, j, w, h, n, map[101][101] = {};
+  int l, d, x, y;
+
+  scanf("%d %d %d", &h, &w, &n);
+  while (n--) {
+    scanf("%d %d %d %d", &l, &d, &x, &y);
+    while (l--)
+      if (d) map[x++][y] = 1;
+      else map[x][y++] = 1;
+  }
+  for (i=1; i <= h; i++, puts(""))//띄워야하니까 puts를 씀
+    for (j = 1; j <= w; j++)
+      printf("%d ", map[i][j]);
+
+  return 0;
+}
