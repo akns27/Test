@@ -3,7 +3,7 @@
 int main()
 {
  int n;
- reload
+ reload:
  scanf("%d", &n);
  
  if(n!=0){
